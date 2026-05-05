@@ -5,27 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learnify</title>
     <link rel="stylesheet" href="style.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <section>
       <!-- header  -->
 
-      <div class="header">
+      <div id="header">
         <div class="navbar">
           <h1 class="logo">Sommy<span>Nice</span></h1>
-          <nav class="nav-links">
+          <nav class="nav-links" id="navLinks">
             <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Feature</a></li>
-              <li><a href="">Courses</a></li>
-              <li><a href="">Offer</a></li>
-              <li><a href="">Contact</a></li>
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#features">Feature</a></li>
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#offer">Offer</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
+          <i class="fa-solid fa-bars-staggered"></i>
         </div>
-        <i class="fa-solid fa-bars-staggered"></i>
       </div>
       <!-- container  -->
       <div class="container">
@@ -86,16 +89,16 @@
     </section>
 
     <!-- feature -->
-    <section class="features">
+    <section id="features">
       <div class="feature-row">
         <div class="feature-col">
-         <i class="fa-solid fa-lightbulb"></i>
+          <i class="fa-solid fa-lightbulb"></i>
           <h4>Learn Anywhere</h4>
           <p>Switch between your computer, tablet or mobile device</p>
         </div>
 
         <div class="feature-col">
-     <i class="fa-solid fa-brain"></i>
+          <i class="fa-solid fa-brain"></i>
           <h4>Expert Teacher</h4>
           <p>
             Learn from industry experts who are are passionate about teaching
@@ -103,7 +106,7 @@
         </div>
 
         <div class="feature-col">
-        <i class="fa-solid fa-rocket"></i>
+          <i class="fa-solid fa-rocket"></i>
           <h4>Unlimited Access</h4>
           <p>
             Choose what you'd like to learn from our extensive subscription
@@ -120,7 +123,7 @@
         <button class="btn">Start Free Trial</button>
       </div>
     </section>
-    <section class="courses">
+    <section id="courses">
       <div class="container course-row">
         <div class="course-left-col">
           <div class="course-text">
@@ -153,7 +156,7 @@
     </section>
 
     <!-- offer -->
-    <section class="offer">
+    <section id="offer">
       <div class="about-left-col">
         <img
           src="images/woman-sitting-in-comfortable-armchair-vector-37661821.avif"
@@ -178,7 +181,7 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section id="contact">
       <div class="container contact-row">
         <div class="contact-left-col">
           <h2>
@@ -202,7 +205,7 @@
       </div>
     </section>
 
-    <section class="footer">
+    <section id="footer">
       <div class="container footer-row">
         <hr />
         <div class="footer-left-col">
@@ -234,10 +237,10 @@
           <div class="footer-info">
             <div class="copyright-text">
               <small>support@sommynice.com</small> <br />
-              <small>Copyright 2026SommyNice</small>
+              <small> copyright &copy; 2026 SommyNice</small>
             </div>
             <div class="footer-logo">
-             <h1 class="logo">Sommy<span>Nice</span></h1>
+              <h1 class="logo">Sommy<span>Nice</span></h1>
               <button class="btn">English</button>
             </div>
           </div>
@@ -246,11 +249,19 @@
     </section>
 
     <!-- social links -->
-     <div class="social-icons">
-      <a href=""><i class="fa-brands fa-square-linkedin"></i></a>
-<i class="fa-brands fa-facebook"></i>
-<i class="fa-brands fa-x-twitter"></i>
-<i class="fa-brands fa-square-instagram"></i>
-     </div>
+    <div class="social-icons">
+      <img src="images/facebook.png" />
+      <img src="images/instagram.png" />
+      <img src="images/linkedin.png" />
+    </div>
+
+    <script>
+      const menuIcon = document.querySelector(".fa-bars-staggered");
+      const navLinks = document.getElementById("navLinks");
+
+      menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

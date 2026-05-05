@@ -4,6 +4,10 @@
   font-family: sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -29,6 +33,12 @@
 
 .nav-links ul li a:hover {
   color: #ff4d05;
+}
+
+.navbar .fa-bars-staggered {
+  display: none;
+  cursor: pointer;
+  font-size: 26px;
 }
 
 .container {
@@ -90,7 +100,7 @@ p {
 
 /* about */
 #about,
-.offer {
+#offer {
   padding: 100px 0;
   display: flex;
   flex-wrap: wrap;
@@ -128,9 +138,10 @@ p {
   color: #777;
 }
 /* features */
-.features {
+#features {
   padding-top: 50px;
   padding-bottom: 50px;
+  box-sizing: border-box;
 }
 .feature-row {
   display: flex;
@@ -156,6 +167,12 @@ p {
   border-bottom: 5px solid #ff4d05;
 }
 
+.feature-col i {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #ff4d05;
+}
+
 .feature-col h4 {
   margin-bottom: 15px;
   font-size: 20px;
@@ -169,13 +186,8 @@ p {
   align-items: flex-end;
 }
 
-.feature-col {
-  /* flex-basis: 1%; */
-  /* text-align: center; */
-}
-
 /* courses */
-.courses {
+#courses {
   padding: 100px 0;
 }
 
@@ -217,7 +229,7 @@ p {
 }
 
 /* contact */
-.contact-row {
+#contact-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -257,7 +269,7 @@ form input {
 }
 
 /* footer  */
-.footer {
+#footer {
   padding: 50px 0 30px;
 }
 
@@ -321,4 +333,61 @@ hr {
   width: 20px;
   margin: 0 auto 20px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    width: 100px;
+    padding: 10px;
+    background: #f4f1f1;
+    color: #fff;
+    flex-direction: column;
+    transition: right 0.3s ease;
+  }
+  .nav-links ul li a {
+    font-weight: bold;
+  }
+  .nav-links.active {
+    right: 0;
+  }
+
+  .navbar .fa-bars-staggered {
+    display: block;
+  }
+  .header-text button {
+    margin-bottom: 30px;
+  }
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #about {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .feature-row {
+    flex-direction: column;
+  }
+  .feature-col {
+    margin-bottom: 15px;
+    width: 350px;
+  }
+  #offer {
+    flex-direction: column;
+  }
+  .footer-left-col,
+  .footer-right-col {
+    flex-basis: 100%;
+  }
+  .link-text {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+  }
+  .social-icons {
+    position: fixed;
+    top: 50%;
+  }
 }
